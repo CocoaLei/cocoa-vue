@@ -1,0 +1,9 @@
+@content-edge: 14px;
+
+.css-arrow(@width: 14px, @height: 14px, @color: #fff, @lineWidth: 2px, @deg: -45deg) {
+  width: @width;
+  height: @height;
+  border-top: @lineWidth solid @color;
+  border-left: @lineWidth solid @color;
+  transform: rotate(@deg);
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "module_name": "cv-loading",
+    "module_path": "loading",
+    "module_desc": "Add a load animation using the vue directive."
+  },
+  {
+    "module_name": "cv-alert",
+    "module_path": "alert",
+    "module_desc": "Show a alert."
+  }
+]
