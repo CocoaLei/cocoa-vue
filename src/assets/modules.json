@@ -8,5 +8,10 @@
     "module_name": "cv-alert",
     "module_path": "alert",
     "module_desc": "Show a alert."
+  },
+  {
+    "module_name": "cv-nodata",
+    "module_path": "nodata",
+    "module_desc": "Show a nodata view."
   }
 ]

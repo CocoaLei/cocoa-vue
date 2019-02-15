@@ -4,6 +4,7 @@ import Home from './views/home';
 
 const CVLoading = () => import('./views/loading');
 const CVAlert = () => import('./views/alert');
+const CVNoData = () => import('./views/no-data');
 
 Vue.use(Router);
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/alert',
       name: 'cv-alert',
       component: CVAlert,
+    },
+    {
+      path: '/nodata',
+      name: 'cv-nodata',
+      component: CVNoData,
     },
   ],
 });

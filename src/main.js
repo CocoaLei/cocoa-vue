@@ -3,6 +3,7 @@ import App from './App';
 import router from './router';
 import store from './store';
 import './directives/cv-loading';
+import './directives/cv-nodata';
 import CVAlert from './plugins/cv-alert';
 
 Vue.use(CVAlert);
