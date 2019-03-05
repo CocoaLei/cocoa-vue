@@ -13,5 +13,15 @@
     "module_name": "cv-nodata",
     "module_path": "nodata",
     "module_desc": "Show a nodata view."
+  },
+  {
+    "module_name": "canvas",
+    "module_path": "canvas",
+    "module_desc": "How to draw graphics in canvas."
+  },
+  {
+    "module_name": "css animation",
+    "module_path": "css-animation",
+    "module_desc": "How to animate with css."
   }
 ]

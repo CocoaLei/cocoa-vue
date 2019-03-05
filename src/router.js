@@ -5,12 +5,14 @@ import Home from './views/home';
 const CVLoading = () => import('./views/loading');
 const CVAlert = () => import('./views/alert');
 const CVNoData = () => import('./views/no-data');
+const Canvas = () => import('./views/canvas');
+const CSSAnimation = () => import('./views/css-animation');
 
 Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.publicPath,
   routes: [
     {
       path: '/',
@@ -31,6 +33,16 @@ export default new Router({
       path: '/nodata',
       name: 'cv-nodata',
       component: CVNoData,
+    },
+    {
+      path: '/canvas',
+      name: 'canvas',
+      component: Canvas,
+    },
+    {
+      path: '/css-animation',
+      name: 'css animation',
+      component: CSSAnimation,
     },
   ],
 });

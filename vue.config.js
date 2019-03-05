@@ -4,8 +4,12 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  // 线上环境关闭 sourceMap
   productionSourceMap: false,
-  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+  // 部署应用包时的基本 URL
+  publicPath: process.env.NODE_ENV === 'production' ? '/cocoa-vue/' : '/',
+  // 静态资源目录
+  assetsDir: 'assets',
   // 是否在每次保存代码时 lint 代码
   lintOnSave: process.env.NODE_ENV !== 'production',
   //

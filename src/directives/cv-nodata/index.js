@@ -1,7 +1,9 @@
 import Vue from 'vue';
 
+const isObject = obj => obj === Object(obj) && Object.prototype.toString.call(obj) !== '[object Array]';
+
 const setStyles = (el, styles) => {
-  Object.assign(el.style, styles);
+  if (isObject(el)) Object.assign(el.style, styles);
 };
 
 const addNoData = (el) => {
@@ -10,16 +12,26 @@ const addNoData = (el) => {
   setStyles(noDataDOM, {
     display: 'flex',
     'align-items': 'center',
-    'background-color': 'hsl(0, 0%, 92%)',
+    'background-color': '#ffffff',
     width: '100%',
     height: '100%',
   });
   const noDataText = el.getAttribute('no-data-text') || 'No data available yet';
   const noDataTextDOM = document.createElement('p');
-  setStyles(noDataTextDOM, { flex: '1', 'text-align': 'center', color: 'hsl(360, 100%, 50%)' });
+  setStyles(noDataTextDOM, { flex: '1', 'text-align': 'center', color: '#9a9a9a', 'line-height': '88px' });
   noDataTextDOM.textContent = noDataText;
   noDataDOM.appendChild(noDataTextDOM);
-  el.appendChild(noDataDOM);
+
+  let hasNoDataNode = false;
+  if (el.hasChildNodes()) {
+    el.childNodes.forEach((childNode) => {
+      if (childNode.id === 'no-data-dom') {
+        hasNoDataNode = true;
+      }
+    });
+  }
+
+  if (!hasNoDataNode) el.appendChild(noDataDOM);
 
   el.childNodes.forEach((childNode) => {
     if (childNode.id !== 'no-data-dom') setStyles(childNode, { display: 'none' });
@@ -32,7 +44,7 @@ const removeNoData = (el) => {
       if (childNode.id === 'no-data-dom') {
         el.removeChild(childNode);
       } else {
-        setStyles(childNode, { display: 'initial' });
+        setStyles(childNode, { display: 'unset' });
       }
     });
   }

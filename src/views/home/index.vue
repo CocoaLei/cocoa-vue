@@ -45,6 +45,14 @@
         height: 120px;
         background-color: #fff;
         margin: 8px;
+        border-radius: 4px;
+        transition: box-shadow .25s ease-in-out, height .25s ease-in-out, background-color .25s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 4px 4px 6px -2px #78BF89;
+          height: 124px;
+          background-color: rgba(120, 191, 137, .5);
+        }
         .cv-list-item {
           display: flex;
           align-items: flex-start;
