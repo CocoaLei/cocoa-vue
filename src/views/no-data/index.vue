@@ -1,7 +1,11 @@
 <template>
   <div class="page">
     <cv-header title="CV No-Data" />
-    <div class="cv-nodata-container" v-no-data="showNoData" no-data-text="暂无数据">
+    <div
+      v-no-data="showNoData"
+      class="cv-nodata-container"
+      no-data-text="暂无数据"
+      >
       <span>No Data View</span>
     </div>
   </div>

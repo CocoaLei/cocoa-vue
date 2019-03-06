@@ -2,7 +2,7 @@
   <div class="page">
     <cv-header title="CSS Animation" />
     <div class="css-animation-container">
-      <div class="animation-ball"></div>
+      <div class="animation-ball" />
     </div>
   </div>
 </template>

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Description
 const isObject = obj => obj === Object(obj) && Object.prototype.toString.call(obj) !== '[object Array]';
 
 const setStyles = (el, styles) => {
@@ -18,7 +19,12 @@ const addNoData = (el) => {
   });
   const noDataText = el.getAttribute('no-data-text') || 'No data available yet';
   const noDataTextDOM = document.createElement('p');
-  setStyles(noDataTextDOM, { flex: '1', 'text-align': 'center', color: '#9a9a9a', 'line-height': '88px' });
+  setStyles(noDataTextDOM, {
+    flex: '1',
+'text-align': 'center',
+color: '#9a9a9a',
+'line-height': '88px',
+  });
   noDataTextDOM.textContent = noDataText;
   noDataDOM.appendChild(noDataTextDOM);
 

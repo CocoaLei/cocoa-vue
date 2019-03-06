@@ -2,8 +2,16 @@
   <div class="page">
     <cv-header title="Cocoa Vue" />
     <div class="modules-container">
-      <cv-list-item class="module-item" v-for="(item, index) in modules" :key="index">
-        <div slot="cv-list-item" class="cv-list-item" @click="$router.push({ path: item.module_path })">
+      <cv-list-item
+        v-for="(item, index) in modules"
+        :key="index"
+        class="module-item"
+        >
+        <div
+          slot="cv-list-item"
+          class="cv-list-item"
+          @click="$router.push({ path: item.module_path, query: { moduleName: item.module_name } })"
+          >
           <span>{{ item.module_name }}</span>
           <span>{{ item.module_desc }}</span>
         </div>
@@ -22,6 +30,19 @@
       return {
         modules: modulesJ,
       };
+    },
+    // 在渲染该组件的对应路由被 confirm 前调用
+    // 此时组件还未被创建
+    beforeRouteEnter: (to, from, next) => {
+      next();
+    },
+    // 当路由更新，当前组件被复用时调用
+    beforeRouteUpdate: (to, from, next) => {
+      next();
+    },
+    // 导航离开当前路由时调用
+    beforeRouteLeave: (to, from, next) => {
+      next();
     },
   };
 </script>

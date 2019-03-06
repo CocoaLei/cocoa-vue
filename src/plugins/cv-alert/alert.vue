@@ -1,9 +1,23 @@
 <template>
   <transition name="cv-alert-fade">
-    <div class="cv-alert" v-show="visible">
-      <div class="cv-alert-content" :class="typeClass">
-        <span class="cv-alert-title" v-if="message">{{ message }}</span>
-        <span class="cv-alert-close" @click="close()"></span>
+    <div
+      v-show="visible"
+      class="cv-alert"
+      >
+      <div
+        class="cv-alert-content"
+        :class="typeClass"
+        >
+        <span
+          v-if="message"
+          class="cv-alert-title"
+          >
+          {{ message }}
+        </span>
+        <span
+          class="cv-alert-close"
+          @click="close()"
+          />
       </div>
     </div>
   </transition>
@@ -11,7 +25,7 @@
 
 <script>
   export default {
-    name: 'cv-alert',
+    name: 'CvAlert',
     props: {
       message: {
         type: String,
@@ -27,15 +41,15 @@
         visible: true,
       };
     },
+    computed: {
+      typeClass() {
+        return `cv-alert-${this.type}`;
+      },
+    },
     methods: {
       close() {
         this.visible = false;
         this.$emit('close');
-      },
-    },
-    computed: {
-      typeClass() {
-        return `cv-alert-${this.type}`;
       },
     },
   };

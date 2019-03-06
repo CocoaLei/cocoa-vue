@@ -1,16 +1,44 @@
 // http://eslint.org/docs/user-guide/configuring
 
 module.exports = {
+  // 不可向父级寻找配置文件
   root: true,
+  // 指定语言类型和风格
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    // 指定 eslint 解析器
+    parser: 'babel-eslint',
+    sourceType: 'module',
+  },
+  // 指定环境的全局变量
   env: {
+    es6: true,
+    browser: true,
     node: true,
   },
+  // 配置标准风格
   extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
+    '@vue/eslint-config-airbnb',
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:vue/base',
+    'plugin:vue/recommended',
   ],
-  parserOptions: {
-    parser: 'babel-eslint',
+  // 配置额外插件
+  plugins: [
+    'import',
+    'vue',
+  ],
+  'settings': {
+    'import/resolver': {
+      'node': {
+        'extensions': [
+          '.js',
+          '.vue',
+        ]
+      }
+    }
   },
   rules: {
     // 引入文件时是否需要文件类型后缀
@@ -25,6 +53,7 @@ module.exports = {
     'max-len': ['warn', { code: 120, comments: 120 }],
     'no-param-reassign': [2, { props: false }],
     'no-return-assign': 0,
+    'object-property-newline':1,
   },
   overrides: [{
     files: ['*.vue'],

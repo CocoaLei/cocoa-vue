@@ -1,16 +1,16 @@
 <template>
   <div class="cssload-wrap">
     <div class="cssload-container">
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
-      <span class="cssload-dots"></span>
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
+      <span class="cssload-dots" />
     </div>
   </div>
 </template>

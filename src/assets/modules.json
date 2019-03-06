@@ -23,5 +23,10 @@
     "module_name": "css animation",
     "module_path": "css-animation",
     "module_desc": "How to animate with css."
+  },
+  {
+    "module_name": "html medias",
+    "module_path": "html-media",
+    "module_desc": "How to play medias."
   }
 ]

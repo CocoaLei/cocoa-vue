@@ -2,11 +2,28 @@
   <div class="page">
     <cv-header title="CV Alert" />
     <div class="cv-alert-container">
-      <span @click="showMsg = !showMsg">show alert</span>
-      <cv-alert message="This is a info alert" v-if="showMsg"></cv-alert>
-      <cv-alert type="warning" message="This is a warning alert"  v-if="showMsg"></cv-alert>
-      <cv-alert type="error" message="This is a error alert" v-if="showMsg"></cv-alert>
-      <cv-alert type="success" message="This is a success alert" v-if="showMsg"></cv-alert>
+      <span @click="showMsg = !showMsg">
+        show alert
+      </span>
+      <cv-alert
+        v-if="showMsg"
+        message="This is a info alert"
+        />
+      <cv-alert
+        v-if="showMsg"
+        type="warning"
+        message="This is a warning alert"
+        />
+      <cv-alert
+        v-if="showMsg"
+        type="error"
+        message="This is a error alert"
+        />
+      <cv-alert
+        v-if="showMsg"
+        type="success"
+        message="This is a success alert"
+        />
     </div>
   </div>
 </template>

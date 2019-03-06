@@ -2,7 +2,9 @@
   <div class="page">
     <cv-header title="Canvas" />
     <div class="canvas-wrapper">
-      <canvas id="canvas">This is a canvas!</canvas>
+      <canvas id="canvas">
+        This is a canvas!
+      </canvas>
     </div>
   </div>
 </template>

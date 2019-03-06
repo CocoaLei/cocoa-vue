@@ -1,11 +1,19 @@
 <template>
   <header
     class="cv-header"
-    :class="{ 'is-fixed': isFixed }">
-    <div v-show="canBack" class="cv-header-button left" @click="$router.back()" />
-    <h1 class="cv-header-title" v-text="title"></h1>
+    :class="{ 'is-fixed': isFixed }"
+    >
+    <div
+      v-show="canBack"
+      class="cv-header-button left"
+      @click="$router.back()"
+      />
+    <h1
+      class="cv-header-title"
+      v-text="title"
+      />
     <div class="cv-header-button right">
-      <slot name="right"></slot>
+      <slot name="right" />
     </div>
   </header>
 </template>

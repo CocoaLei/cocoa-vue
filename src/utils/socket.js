@@ -7,5 +7,9 @@ export default {
       // eslint-disable-next-line
       console.log(cvReq);
     };
+    cvReq.onloadstart = (req) => {
+      console.log(req);
+    };
+    cvReq.send();
   },
 };

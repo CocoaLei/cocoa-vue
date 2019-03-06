@@ -1,11 +1,11 @@
 <template>
   <div class="cv-loading">
     <div class="cv-loading-inner">
-      <span/>
-      <span/>
-      <span/>
-      <span/>
-      <span/>
+      <span />
+      <span />
+      <span />
+      <span />
+      <span />
     </div>
   </div>
 </template>

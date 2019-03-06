@@ -1,7 +1,7 @@
 <template>
   <transition name="cv-item-fade">
     <div class="cv-list-item-container">
-      <slot name="cv-list-item"></slot>
+      <slot name="cv-list-item" />
     </div>
   </transition>
 </template>
