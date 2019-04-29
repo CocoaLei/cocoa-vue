@@ -50,6 +50,7 @@ module.exports = {
     'vue/script-indent': ['warn', 2, { baseIndent: 1 }],
     // <template></template> 中的缩进，一个缩进两个空格
     'vue/html-indent': ['warn', 2, { attribute: 1, baseIndent: 1, closeBracket: 1 }],
+    'vue/html-self-closing': 0,
     'max-len': ['warn', { code: 120, comments: 120 }],
     'no-param-reassign': [2, { props: false }],
     'no-return-assign': 0,

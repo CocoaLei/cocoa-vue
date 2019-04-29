@@ -10,7 +10,7 @@
         <div
           slot="cv-list-item"
           class="cv-list-item"
-          @click="$router.push({ path: item.module_path, query: { moduleName: item.module_name } })"
+          @click="$router.push({ path: item.module_path, params: { name: item.module_name } })"
           >
           <span>{{ item.module_name }}</span>
           <span>{{ item.module_desc }}</span>

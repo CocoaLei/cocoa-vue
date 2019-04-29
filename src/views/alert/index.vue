@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="module-page page">
     <cv-header title="CV Alert" />
     <div class="cv-alert-container">
       <span @click="showMsg = !showMsg">
@@ -46,10 +46,6 @@
   @import "~@/styles/common";
 
   .page {
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-
     .cv-alert-container {
       margin-top: 88px;
       width: 100%;

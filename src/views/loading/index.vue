@@ -3,19 +3,19 @@
     <cv-header title="CV Loading" />
     <div
       v-loading="isLoading"
-      class="cv-loading-container"
+      class="cv-loading-container cv-loading-cls"
       spinner-mask-type="bar"
-      />
+      ></div>
     <div
       v-loading="isLoading"
       class="cv-loading-container"
       spinner-mask-type="duplex"
-      />
+      ></div>
     <div
       v-loading="isLoading"
       class="cv-loading-container"
       spinner-mask-type="ball"
-      />
+      ></div>
   </div>
 </template>
 
@@ -30,17 +30,13 @@
         isLoading: false,
       };
     },
-    beforeRouteEnter: (to, from, next) => {
-      if (to.query.moduleName === 'cv-loading') {
-        next();
-      } else {
-        next({ path: '/' });
-      }
-    },
     created() {
       setInterval(() => {
         this.isLoading = !this.isLoading;
       }, 2000);
+    },
+    mounted() {
+      console.log(this.isRoot);
     },
   };
 </script>

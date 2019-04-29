@@ -28,5 +28,15 @@
     "module_name": "html medias",
     "module_path": "html-media",
     "module_desc": "How to play medias."
+  },
+  {
+    "module_name": "Rick Text Editor",
+    "module_path": "text-editor",
+    "module_desc": "A rick text editor."
+  },
+  {
+    "module_name": "Form",
+    "module_path": "form",
+    "module_desc": "Form."
   }
 ]

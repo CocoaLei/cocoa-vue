@@ -8,6 +8,8 @@ const CVNoData = () => import('./views/no-data');
 const Canvas = () => import('./views/canvas');
 const CSSAnimation = () => import('./views/css-animation');
 const HTMLMedias = () => import('./views/media');
+const RichTextEditor = () => import('./views/richtext');
+const Form = () => import('./views/form');
 
 Vue.use(Router);
 
@@ -23,8 +25,7 @@ const router = new Router({
     if (savedPos) {
       return savedPos;
     }
-    return { x: 0,
-y: 0 };
+    return { x: 0, y: 0 };
   },
   routes: [
     {
@@ -40,6 +41,7 @@ y: 0 };
     {
       path: '/loading',
       name: 'cv-loading',
+      props: { default: false, isRoot: 'false' },
       component: CVLoading,
     },
     {
@@ -66,6 +68,16 @@ y: 0 };
       path: '/html-media',
       name: 'HTML Media',
       component: HTMLMedias,
+    },
+    {
+      path: '/text-editor',
+      name: 'Rich Text Editor',
+      component: RichTextEditor,
+    },
+    {
+      path: '/form',
+      name: 'Form',
+      component: Form,
     },
   ],
 });
